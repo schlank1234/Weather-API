@@ -18,7 +18,7 @@ function searchWeather(searchValue) {
     }
     $.ajax({
         type: "GET",
-        url: "http://api.openweathermap.org/data/2.5/weather?q=" +
+        url: "https://api.openweathermap.org/data/2.5/weather?q=" +
             searchValue +
             "&appid=" +
             /* your API key here */
@@ -31,7 +31,7 @@ function searchWeather(searchValue) {
             var lon = data.coord.lon;
             $.ajax({
                 type: "GET",
-                url: "http://api.openweathermap.org/data/2.5/forecast?lat=" +
+                url: "https://api.openweathermap.org/data/2.5/forecast?lat=" +
                     lat + "&lon=" + lon + "&appid=" +
                     /* your API key here */
                     apikey +
